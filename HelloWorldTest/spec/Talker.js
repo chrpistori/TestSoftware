@@ -1,38 +1,23 @@
 describe("Talker", function() {
-  var world;
+  var talk;
 
-  world = new World;
+  talk = new Talk;
 
-  it("should be able to say hello world", function() {
-    world.say();
+  it("should be able to say", function() {
+    talk.say();
 
-    expect(world.isSaying).toEqual(true);
-
-    expect(world).toBeSaying();
+    expect(talk.isSaying).toEqual(true);
   });
 
-  describe("when world is not saying anything", function() {
+  describe("when talk is not saying anything", function() {
     beforeEach(function() {
-      world.say();
-      world.stopSaying();
+      talk.say();
+      talk.stopSaying();
     });
 
-    it("should indicate that Talker stopped saying hello world ", function() {
-      expect(world.isSaying).toBeFalsy();
-
-      // demonstrates use of 'not' with a custom matcher
-      expect(world).not.toBeSaying();
+    it("should indicate that Talker stopped saying", function() {
+      expect(talk.isSaying).toBeFalsy();
     });
 
   });
-});
-
-
-describe("Nome da suite", function() {
-  
-  it("Descrição da spec", function() {
-    // bloco de código
-  });
-
-  // outras specs
 });
