@@ -3,7 +3,7 @@ describe('Hello :)', function() {
   var hello = new Hello();
 
   it('says my name', function() {
-    expect(hello.sayHi('Fabeni')).toEqual('my name is Fabeni and I\'m learning Jasmine!');
+    expect(hello.sayHi('Christian')).toEqual('my name is Christian and I\'m learning Jasmine!');
   });
 
 });
